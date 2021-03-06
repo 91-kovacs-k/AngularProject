@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>{{question}}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            Agree: {{agreed}}, Disagree: {{disagreed}}
+        </div>
+    </div>
+    <div class="row" *ngFor="let person of people">
+        <div class="col-md-12">
+            <app-ballot [person]="person" (voted)="handleVote(event)"></app-ballot>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,49 @@
-<app-voting [question]="question" [people]="people"></app-voting>
+[<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{title}}</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul *ngFor="let item of items">
+                <li>{{item}}</li>
+            </ul>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Color</th>
+                </tr>
+                <tr *ngFor="let person of people">
+                    <td>{{person.name}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.color}}</td>
+                </tr>
+            </table>
+
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-danger" (click)="removeFromList()">Remove</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-danger" (click)="removeFromTable()">Remove</button>
+            </div>
+        </div>
+    </div>
+        
+
+    </div>
+</div>
+
+<div class="container">
+
+</div>

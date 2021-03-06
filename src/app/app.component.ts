@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Person } from './person';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +8,20 @@ import { Person } from './person';
 export class AppComponent {
   title = 'AngularProject';
 
-  question = "Should mankind colonize the Universe?";
+  items = ['item1', 'item2', 'item3', 'item4', 'alma'];
 
-  people: Person[] = [
-    {name:"Mr. IQ", voted: false},
-    {name:"Ms. Mici", voted: false},
-    {name:"Mr. Lángos", voted: false}
+  people = [
+    { name: 'Józsi', age: '23', color: 'blue' },
+    { name: 'Bertalan', age: '65', color: 'green' },
+    { name: 'Viktória', age: '35', color: 'yellow' }
   ];
 
+  removeFromList() {
+    this.items.pop();
+  }
 
+  removeFromTable() {
+    this.people.shift();
+  }
 }
+

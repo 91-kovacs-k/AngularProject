@@ -11,7 +11,7 @@
     </div>
     <div class="row" *ngFor="let person of people">
         <div class="col-md-12">
-            <app-ballot [person]="person" (voted)="handleVote(event)"></app-ballot>
+            <app-ballot [person]="person" (voteResult)="handleVote($event)"></app-ballot>
         </div>
     </div>
 </div>
